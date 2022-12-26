@@ -5,7 +5,7 @@ const url = "https://www.jiosaavn.com/home"
 async function getTrendingData(req, res) {
     const { data } = await axios.get(url);
     const $ = cheerio.load(data);
-    const listItems = $("#homepage_module_0 .c-drag");
+    const listItems = $(".c-drag");
     // console.log(listItems)
     const links = [];
 
@@ -18,7 +18,7 @@ async function getTrendingData(req, res) {
             type: undefined,
             name: undefined,
             link: undefined,
-            singerDetails: undefined,
+            singerDetails: undefined
         };
         const type = link.split("/")[1];
         if (type == "featured") {
@@ -50,7 +50,7 @@ async function getTrendingData(req, res) {
 
         links.push(resObj);
     })
-    console.log(links);
+    console.log(links.length);
     res.send(links);
 }
 

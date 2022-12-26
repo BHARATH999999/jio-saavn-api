@@ -1,10 +1,16 @@
 const express = require('express')
 const app = express();
+
+const { getTrendingData } = require('./controller/TrendingController');
+// const { getTopCharts } = require('./controller/TopChartsController');
+// const { getNewReleases } = require('./controller/NewReleasesController');
+// const { getEditorialPicks } = require('./controller/EditorialPicksController');
+// const { getRadioStations } = require('./controller/RadioStationsController');
+
 const { getSongDetails, getSongId, getSongMediaUrl, getLyricsDetails } = require('./controller/SongController');
 const { getPlaylistId, getPlaylistsDetails } = require('./controller/PlaylistController');
 const { getQueryResults } = require('./controller/QueryController');
 const { getAlbumId, getAlbumDetails, getAlbumSongs } = require('./controller/AlbumController');
-const { getTrendingData } = require('./controller/TrendingController');
 
 app.use(express.json());
 function fn(req, res) {
@@ -13,9 +19,14 @@ function fn(req, res) {
     });
 }
 
-app.get('/', fn)
+app.get('/', fn); //Home page
 
-app.get('/trendingData', getTrendingData);
+app.get('/trendingData', getTrendingData);            //0
+// app.get('/topCharts', getTopCharts);                  //1
+// app.get('/newReleases', getNewReleases);              //2
+// app.get('/editorialPicks', getEditorialPicks);        //3
+// app.get('/radioStations', getRadioStations);          //4
+
 app.get('/albumId/:albumName', getAlbumId);
 app.get('/album/:albumId', getAlbumDetails);
 app.get('/album/songs/:albumId', getAlbumSongs);
