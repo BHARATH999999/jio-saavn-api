@@ -2,10 +2,10 @@
   "name": "jio-saavn-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "api.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon api.js"
+    "start": "node api.js"
   },
   "keywords": [],
   "author": "@bharath999999",
@@ -14,6 +14,7 @@
     "axios": "^1.2.1",
     "cheerio": "^1.0.0-rc.12",
     "express": "^4.18.2",
+    "node-file-downloader": "^0.2.0",
     "nodemon": "^2.0.20"
   }
 }
