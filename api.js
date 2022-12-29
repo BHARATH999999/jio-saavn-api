@@ -1,9 +1,11 @@
 const express = require('express')
+const cors = require('cors')
 const app = express();
 // const axios = require('axios');
+app.use(cors());
 const download = require("node-file-downloader")
 
-const { getTrendingData } = require('./controller/TrendingController');
+const { getTrendingData } = require('./controller/home');
 // const { getTopCharts } = require('./controller/TopChartsController');
 // const { getNewReleases } = require('./controller/NewReleasesController');
 // const { getEditorialPicks } = require('./controller/EditorialPicksController');
