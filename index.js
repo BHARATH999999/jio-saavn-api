@@ -23,7 +23,18 @@ const { getAlbumId, getAlbumDetails, getAlbumSongs } = require('./controller/Alb
 app.use(express.json());
 function fn(req, res) {
     res.send({
-        welcome: "Welcome to Jio Saavn Unofficial Api! Create with ❤️❤️❤️ using Express and cheerio by @bharath999999"
+        welcome: "Welcome to Jio Saavn Unofficial Api! Create with ❤️❤️❤️ using Express and cheerio by @bharath999999. Here are the routes to acess this api",
+        '/trendingData': "getTrendingData",
+        '/albumId/:albumName': "getAlbumId",
+        '/album/:albumId': "getAlbumDetails",
+        '/album/songs/:albumId': "getAlbumSongs",
+        'songId/:songName': "getSongId",
+        '/songDetails/:songId': "getSongDetails",
+        '/songMediaUrl/:songId': "getSongMediaUrl",
+        '/lyrics/:songId': "getLyricsDetails",
+        '/playlistId/:playlistName': "getPlaylistId",
+        '/playlist/:playlistId': "getPlaylistsDetails",
+        '/search/:query': "getQueryResults"
     });
 }
 
