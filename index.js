@@ -28,7 +28,7 @@ function fn(req, res) {
         '/albumId/:albumName': "getAlbumId",
         '/album/:albumId': "getAlbumDetails",
         '/album/songs/:albumId': "getAlbumSongs",
-        'songId/:songName': "getSongId",
+        '/songId/:songName': "getSongId",
         '/songDetails/:songId': "getSongDetails",
         '/songMediaUrl/:songId': "getSongMediaUrl",
         '/lyrics/:songId': "getLyricsDetails",
