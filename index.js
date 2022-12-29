@@ -2,8 +2,12 @@ const express = require('express')
 const cors = require('cors')
 const app = express();
 // const axios = require('axios');
+const port = process.env.PORT || 9999;
+
+
 app.use(cors());
-const download = require("node-file-downloader")
+// const download = require("node-file-downloader")
+
 
 const { getTrendingData } = require('./controller/home');
 // const { getTopCharts } = require('./controller/TopChartsController');
@@ -69,6 +73,6 @@ async function getSongDownload(req, res) {
     fs.writeFile(`./songs/${filename}.mp4`, buffer, () =>
         console.log('finished downloading video!'));
 }
-app.listen(9999, function () {
-    console.log("server started at 9999");
+app.listen(port, function () {
+    console.log(`server started at ${port}`);
 })
