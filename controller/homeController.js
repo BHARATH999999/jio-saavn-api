@@ -26,7 +26,7 @@ async function getHomePageDetails(req, res) {
 
         const detail = [];
 
-        elements.each(async (idx, el) => {
+        elements.each((idx, el) => {
             const temp = $(el).find(".o-block__img").children("a")
             const link = temp.attr("href") // link can be belonging to album or song or playlist
             const name = temp.attr("title")// name can be belonging to album or song or playlist 

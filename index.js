@@ -9,7 +9,7 @@ app.use(cors());
 // const download = require("node-file-downloader")
 
 const {getHomePageDetails} = require('./controller/homeController');
-const { getTrendingData } = require('./controller/TrendingController');
+// const { getTrendingData } = require('./controller/TrendingController');
 // const { getTopCharts } = require('./controller/TopChartsController');
 // const { getNewReleases } = require('./controller/NewReleasesController');
 // const { getEditorialPicks } = require('./controller/EditorialPicksController');
