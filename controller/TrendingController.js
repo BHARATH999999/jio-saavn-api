@@ -5,7 +5,7 @@ const url = "https://www.jiosaavn.com/home"
 async function getTrendingData(req, res) {
     const { data } = await axios.get(url);
     const $ = cheerio.load(data);
-    const listItems = $(".c-drag");
+    const listItems = $("#homepage_module_0"); //some changes have to be done here
     // console.log(listItems)
     const links = [];
 
@@ -50,7 +50,7 @@ async function getTrendingData(req, res) {
 
         links.push(resObj);
     })
-    console.log(links.length);
+    // console.log(links.length);
     res.send(links);
 }
 
