@@ -51,7 +51,7 @@ async function getLyricsDetails(req, res) {
         let songDetails = await axios.get(`https://www.jiosaavn.com/api.php?__call=song.getDetails&cc=in&_marker=0%3F_marker%3D0&_format=json&pids=${songId}`)
         let data = songDetails.data;
         let lyrics = await axios.get(`https://www.jiosaavn.com/api.php?__call=lyrics.getLyrics&ctx=web6dot0&api_version=4&_format=json&_marker=0%3F_marker%3D0&lyrics_id=${songId}`)
-        if (lyrics.data[0]) {
+        if (lyrics.data) {
             res.send({ lyrics: lyrics.data });
         }
         else {
