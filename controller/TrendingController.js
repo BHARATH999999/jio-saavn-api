@@ -1,9 +1,9 @@
 const axios = require("axios");
 const cheerio = require('cheerio');
-const url = "https://www.jiosaavn.com/home"
+let { url } = require("../utilities/endPoints");
 
 async function getTrendingData(req, res) {
-    const { data } = await axios.get(url);
+    const { data } = await axios.get(url + "/home");
     const $ = cheerio.load(data);
     const listItems = $("#homepage_module_0"); //some changes have to be done here
     // console.log(listItems)
@@ -27,7 +27,7 @@ async function getTrendingData(req, res) {
         else if (type == "song") {
             resObj.type = "song";
             const signers = $(el).find("span").text();
-            resObj.singerDetails = signers.split(",").map((ele)=>{
+            resObj.singerDetails = signers.split(",").map((ele) => {
                 return ele.trim();
             });
         }

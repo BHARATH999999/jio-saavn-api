@@ -1,6 +1,6 @@
 const axios = require("axios");
 const cheerio = require('cheerio');
-const url = "https://www.jiosaavn.com"
+const {url} = require("../utilities/endPoints");
 
 // async function imageLink(link) {
 //     const res = await axios.get(url + link);

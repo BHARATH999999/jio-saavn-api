@@ -1,9 +1,10 @@
 const axios = require("axios");
+const {searchBaseUrl} = require("../utilities/endPoints");
 
 async function getQueryResults(req, res) {
     try {
         let query = req.params.query;
-        let data = await axios.get("https://www.jiosaavn.com/api.php?__call=autocomplete.get&_format=json&_marker=0&cc=in&includeMetaTags=1&query="+query);
+        let data = await axios.get(searchBaseUrl + query);
         res.send(data.data);
     }
     catch (err) {

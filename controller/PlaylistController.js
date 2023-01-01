@@ -1,9 +1,10 @@
 const axios = require("axios");
+const {searchBaseUrl, playlistDetailsBaseUrl} = require("../utilities/endPoints");
 
 async function getPlaylistId(req, res) {
     try {
         let playlistName = req.params.playlistName;
-        let querryDetails = await axios.get(`https://www.jiosaavn.com/api.php?__call=autocomplete.get&_format=json&_marker=0&cc=in&includeMetaTags=1&query=${playlistName}`)
+        let querryDetails = await axios.get(searchBaseUrl + playlistName)
         // console.log(querryDetails)
         let data = querryDetails.data.playlists.data[0];
         if (data)
@@ -19,7 +20,7 @@ async function getPlaylistId(req, res) {
 async function getPlaylistsDetails(req, res) {
     try {
         let playlistId = req.params.playlistId;
-        let playlistData = await axios.get(`https://www.jiosaavn.com/api.php?__call=playlist.getDetails&_format=json&cc=in&_marker=0%3F_marker%3D0&listid=`+ playlistId);
+        let playlistData = await axios.get(playlistDetailsBaseUrl + playlistId);
         res.send(playlistData.data);
     }
     catch (err) {

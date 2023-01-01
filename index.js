@@ -23,7 +23,7 @@ const { getAlbumId, getAlbumDetails, getAlbumSongs } = require('./controller/Alb
 app.use(express.json());
 function fn(req, res) {
     res.send({
-        welcome: "Welcome to Jio Saavn Unofficial Api! Create with ❤️❤️❤️ using Javascript, Express and cheerio by @bharath999999. Here are the routes to acess this api",
+        welcome: "Welcome to Jio Saavn Unofficial Api! Create with ❤️❤️❤️ using JavaScript, Express and cheerio by @bharath999999. Here are the routes to acess this api",
         '/homePageDetails': "getHomePageDetails",
         // '/trendingData': "getTrendingData",
         '/albumId/:albumName': "getAlbumId",
@@ -42,7 +42,7 @@ function fn(req, res) {
 app.get('/', fn); //Home page
 
 app.get("/homePageDetails", getHomePageDetails); //Home page
-// app.get('/trendingData', getTrendingData);               //0
+// app.get('/trendingData', getTrendingData);            //0
 // app.get('/topCharts', getTopCharts);                  //1
 // app.get('/newReleases', getNewReleases);              //2
 // app.get('/editorialPicks', getEditorialPicks);        //3
