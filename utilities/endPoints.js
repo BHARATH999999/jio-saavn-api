@@ -1,8 +1,8 @@
 const url = "https://www.jiosaavn.com";
 
-const imageDetailsRectifier = function(link){
+// const imageDetailsRectifier = function(link){
 
-}
+// }
 
 module.exports = {
   url: url,
@@ -12,5 +12,5 @@ module.exports = {
   lyricsBaseUrl: `${url}/api.php?__call=lyrics.getLyrics&ctx=web6dot0&api_version=4&_format=json&_marker=0%3F_marker%3D0&lyrics_id=`,
   playlistDetailsBaseUrl: `${url}/api.php?__call=playlist.getDetails&_format=json&cc=in&_marker=0%3F_marker%3D0&listid=`,
   mediaBaseUrl: "https://aac.saavncdn.com/",
-  imageDetailsRectifier : imageDetailsRectifier
+  // imageDetailsRectifier : imageDetailsRectifier
 };
