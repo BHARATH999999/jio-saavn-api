@@ -8,7 +8,7 @@ const port = process.env.PORT || 9999;
 app.use(cors());
 // const download = require("node-file-downloader")
 
-const {getHomePageDetails} = require('./controller/homeController');
+const { getHomePageDetails } = require('./controller/homeController');
 // const { getTrendingData } = require('./controller/TrendingController');
 // const { getTopCharts } = require('./controller/TopChartsController');
 // const { getNewReleases } = require('./controller/NewReleasesController');
@@ -19,6 +19,7 @@ const { getSongDetails, getSongId, getSongMediaUrl, getLyricsDetails } = require
 const { getPlaylistId, getPlaylistsDetails } = require('./controller/PlaylistController');
 const { getQueryResults } = require('./controller/QueryController');
 const { getAlbumId, getAlbumDetails, getAlbumSongs } = require('./controller/AlbumController');
+const { getImage } = require('./controller/ImageController');
 
 app.use(express.json());
 function fn(req, res) {
@@ -35,7 +36,8 @@ function fn(req, res) {
         '/lyrics/:songId': "getLyricsDetails",
         '/playlistId/:playlistName': "getPlaylistId",
         '/playlist/:playlistId': "getPlaylistsDetails",
-        '/search/:query': "getQueryResults"
+        '/search/:query': "getQueryResults",
+        '/Image/:type/:name/:id': "getImage"
     });
 }
 
@@ -58,34 +60,8 @@ app.get('/lyrics/:songId', getLyricsDetails);
 app.get('/playlistId/:playlistName', getPlaylistId);
 app.get('/playlist/:playlistId', getPlaylistsDetails);
 app.get('/search/:query', getQueryResults);
-app.get('/song/download/:songName/:songId1/:songId2', getSongDownload);
+app.get('/image/:type/:name/:id', getImage);
 
-// function getDownload(req, res){
-//     let filePath = "https://aac.saavn.com/" + req.params.SongId1 + '/' + req.params.SongId2;
-//     let filename = req.params.songName;
-//     res.download(filePath,filename);
-// }
-
-// function getSongDownload(req, res) {
-//     let filePath = "https://aac.saavn.com/" + req.params.SongId1 + '/' + req.params.SongId2;
-//     let filename = req.params.songName;
-//     download(filePath, filename + ".mp4", function(){
-//         console.log("Downloaded");
-//     })
-//     res.send("Sucessfully downloaded");
-// }
-
-async function getSongDownload(req, res) {
-    const fetch = require('node-fetch');
-    const fs = require('fs');
-    let filePath = "https://aac.saavncdn.com/" + req.params.SongId1 + '/' + req.params.SongId2;
-    let filename = req.params.songName;
-    const response = await fetch(filePath);
-    const buffer = await response.buffer();
-
-    fs.writeFile(`./songs/${filename}.mp4`, buffer, () =>
-        console.log('finished downloading video!'));
-}
 app.listen(port, function () {
     console.log(`server started at ${port}`);
 })
