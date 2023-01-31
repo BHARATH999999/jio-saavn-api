@@ -19,7 +19,6 @@ const { getSongDetails, getSongId, getSongMediaUrl, getLyricsDetails } = require
 const { getPlaylistId, getPlaylistsDetails } = require('./controller/PlaylistController');
 const { getQueryResults } = require('./controller/QueryController');
 const { getAlbumId, getAlbumDetails, getAlbumSongs } = require('./controller/AlbumController');
-const { getImage } = require('./controller/ImageController');
 
 app.use(express.json());
 function fn(req, res) {
