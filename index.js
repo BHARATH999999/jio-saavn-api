@@ -36,8 +36,7 @@ function fn(req, res) {
         '/lyrics/:songId': "getLyricsDetails",
         '/playlistId/:playlistName': "getPlaylistId",
         '/playlist/:playlistId': "getPlaylistsDetails",
-        '/search/:query': "getQueryResults",
-        '/Image/:type/:name/:id': "getImage"
+        '/search/:query': "getQueryResults"
     });
 }
 
@@ -60,7 +59,6 @@ app.get('/lyrics/:songId', getLyricsDetails);
 app.get('/playlistId/:playlistName', getPlaylistId);
 app.get('/playlist/:playlistId', getPlaylistsDetails);
 app.get('/search/:query', getQueryResults);
-app.get('/image/:type/:name/:id', getImage);
 
 app.listen(port, function () {
     console.log(`server started at ${port}`);
