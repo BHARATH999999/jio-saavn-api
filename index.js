@@ -61,7 +61,7 @@ app.get('/lyrics/:songId', getLyricsDetails);
 app.get('/playlistId/:playlistName', getPlaylistId);
 app.get('/playlist/:playlistId', getPlaylistsDetails);
 app.get('/search/:query', getQueryResults);
-app.get('/getLangaugeData/:language', getLanguageData);
+app.get('/getLanguageData/:language', getLanguageData);
 app.get('/getAllLanguageData', getAllLanguageData);
 
 app.listen(port, function () {
