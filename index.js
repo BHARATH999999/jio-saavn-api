@@ -19,11 +19,12 @@ const { getSongDetails, getSongId, getSongMediaUrl, getLyricsDetails } = require
 const { getPlaylistId, getPlaylistsDetails } = require('./controller/PlaylistController');
 const { getQueryResults } = require('./controller/QueryController');
 const { getAlbumId, getAlbumDetails, getAlbumSongs } = require('./controller/AlbumController');
+const { getLanguageData, getAllLanguageData } = require('./controller/LanguageController');
 
 app.use(express.json());
 function fn(req, res) {
     res.send({
-        welcome: "Welcome to Jio Saavn Unofficial Api! Create with ❤️❤️❤️ using JavaScript, Express and cheerio by @bharath999999. Here are the routes to acess this api",
+        welcome: "Welcome to Jio Saavn Unofficial Api! Created with ❤️❤️❤️ using JavaScript, Express and cheerio by @bharath999999. Here are the routes to acess this api",
         '/homePageDetails': "getHomePageDetails",
         // '/trendingData': "getTrendingData",
         '/albumId/:albumName': "getAlbumId",
@@ -35,7 +36,9 @@ function fn(req, res) {
         '/lyrics/:songId': "getLyricsDetails",
         '/playlistId/:playlistName': "getPlaylistId",
         '/playlist/:playlistId': "getPlaylistsDetails",
-        '/search/:query': "getQueryResults"
+        '/search/:query': "getQueryResults",
+        '/getAllLanguageData' : "getAllLanguageData",
+        '/getLanguageData/:language': "getLanguageData of the one of the languages like Hindi, English, Tamil, Telugu, Punjabi, Marathi, Gujarati, Bengali, Kannada, Bhojpuri, Malayalam, Urdu, Haryanvi, Rajasthani, Odia, Assamese"
     });
 }
 
@@ -58,6 +61,8 @@ app.get('/lyrics/:songId', getLyricsDetails);
 app.get('/playlistId/:playlistName', getPlaylistId);
 app.get('/playlist/:playlistId', getPlaylistsDetails);
 app.get('/search/:query', getQueryResults);
+app.get('/getLangaugeData/:language', getLanguageData);
+app.get('/getAllLanguageData', getAllLanguageData);
 
 app.listen(port, function () {
     console.log(`server started at ${port}`);
