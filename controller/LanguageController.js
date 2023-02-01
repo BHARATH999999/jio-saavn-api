@@ -156,34 +156,40 @@ async function getLanguageData(req, res) {
         let { data } = await axios.get(url + "/sitemap.php");
         const $ = cheerio.load(data);
         const listItems = $(".page-wrap ul li");
-        // console.log("listItems.length", listItems.length)
 
         let language = req.params.language.toLowerCase();
-        if(help[language] === undefined){
+        if (help[language] === undefined) {
             res.status(404);
-            res.send({"Error" : "Please enter a valid language"});
+            res.send({ "Error": "Please enter a valid language" });
             return;
         }
-        let start = help[language].start;
-        let end = help[language].end;
 
         let res1 = [];
-        for (let i = start - 1; i < end; i++) { // indexing in array starts at 0 wheres as in searching starts at 1
+        for (let i = 7; i < listItems.length; i++) { 
+            // indexing in array starts at 0 wheres as in searching starts at 1
             let name = $(listItems[i]).children("a")?.text();
-            let link = $(listItems[i]).children("a")?.attr("href");
-            let resObj = {
-                name: name,
-                link: link
+            let nameSplit = name?.split(" ");
+            for (let j = 0; j < nameSplit.length; j++) {
+                if (nameSplit[j].toLowerCase() === language) {
+                    let link = $(listItems[i]).children("a")?.attr("href");
+                    let resObj = {
+                        name: name,
+                        link: link
+                    }
+                    res1.push(resObj);
+                    break;
+                }
+                else if(help[nameSplit[j].toLowerCase()]) break;
             }
-            // console.log(resObj)
-            res1.push(resObj);
+            if(res1.length >= 5) break;
         }
 
-        // console.log(res1);
+        console.log(res1);
         res.send(res1);
     }
     catch (err) {
         res.status(500);
+        console.log(err);
         res.send(err);
     }
 }
@@ -201,7 +207,7 @@ async function getAllLanguageData(req, res) {
             let end = ele.end;
 
             let res1 = [{ language: ele.name }];
-            for (let i = start - 1; i < end; i++) { 
+            for (let i = start - 1; i < end; i++) {
                 // indexing in array starts at 0 wheres as in searching starts at 1
                 let name = $(listItems[i]).children("a")?.text();
                 let link = $(listItems[i]).children("a")?.attr("href");
