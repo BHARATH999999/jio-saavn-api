@@ -1,6 +1,9 @@
 <h1 align="center">Hi 👋, Welcome to <a href = "https://d68j0s.sse.codesandbox.io/">Jio Saavn Api </a></h1>
 <h3 align="center">An unofficial Music api built with ❤️ using Express.js, cheerio and Javascript</h3>
 <img align="center" alt = "Music" width = "100%" height = "666px" src = "https://m.media-amazon.com/images/I/61sKrIdMneL.jpg">
+<h2> </h2>
+<h2> Request:</h2>
+<h3> Kindly acess this api in Postman or Firefox browser, so that you can visualize the data fetched by this api in a pretty manner. </h3> 
 <h2> 
 Routes to acess this Api:
 </h2>
