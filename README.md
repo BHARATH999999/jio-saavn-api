@@ -29,7 +29,7 @@ Routes to acess this Api:
  <h3 align="left">Languages and Tools:</h3>
 <p align="left"> 
         <a align = "center" target="_blank" href ="https://expressjs.com/" rel="noreferrer">
-                <img src="https://www.nextontop.com/assets/img/services/web/expressjs.svg" alt="Express" width="66" height="66"/> 
+                <img src="https://avatars.githubusercontent.com/u/5658226?s=200&v=4" alt="Express" width="45" height="45"/> 
         </a>
         <a target="_blank" href ="https://cheerio.js.org/" rel="noreferrer">
                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTIAPmdeXbdwHRGCgUnelx64Ig_zAsJaS__BhjuFY3plSu6EFrQEJiI7xMM9I3wwc_57Q&usqp=CAU"                        alt="Cheerio" width="45" height="45"/> 
