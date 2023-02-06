@@ -29,10 +29,10 @@ Routes to acess this Api:
  <h3 align="left">Languages and Tools:</h3>
 <p align="left"> 
 <a href="https://getbootstrap.com" target="_blank" rel="noreferrer">
- <img src="https://www.nextontop.com/assets/img/services/web/expressjs.svg" alt="Express" width="50" height="50"/> 
- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTIAPmdeXbdwHRGCgUnelx64Ig_zAsJaS__BhjuFY3plSu6EFrQEJiI7xMM9I3wwc_57Q&usqp=CAU" alt="Cheerio" width="40" height="40"/> 
- <img src="https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/79f52915-94fb-47db-85a2-46cfe4dffd47_600x600.png" alt="Javascript" width="40" height="40"/> 
- <img src="https://avatars.githubusercontent.com/u/32372333?s=200&v=4" alt="Axios" width="40" height="40"/> 
+ <img src="https://www.nextontop.com/assets/img/services/web/expressjs.svg" alt="Express" width="66" height="66"/> 
+ <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTIAPmdeXbdwHRGCgUnelx64Ig_zAsJaS__BhjuFY3plSu6EFrQEJiI7xMM9I3wwc_57Q&usqp=CAU" alt="Cheerio" width="45" height="45"/> 
+ <img src="https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/79f52915-94fb-47db-85a2-46cfe4dffd47_600x600.png" alt="Javascript" width="45" height="45"/> 
+ <img src="https://avatars.githubusercontent.com/u/32372333?s=200&v=4" alt="Axios" width="45" height="45"/> 
  </a>
  
  <h2></h2>
