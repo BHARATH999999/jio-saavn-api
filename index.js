@@ -18,7 +18,7 @@ const { getHomePageDetails } = require('./controller/homeController');
 const { getSongDetails, getSongId, getSongMediaUrl, getLyricsDetails } = require('./controller/SongController');
 const { getPlaylistId, getPlaylistsDetails } = require('./controller/PlaylistController');
 const { getQueryResults } = require('./controller/QueryController');
-const { getAlbumId, getAlbumDetails, getAlbumSongs } = require('./controller/AlbumController');
+const { getAlbumId, getAlbumDetails, getAlbumSongs, getAllAlbumsInALanguage, getAllAlbumsInALanguageStartsWith } = require('./controller/AlbumController');
 const { getLanguageData, getAllLanguageData } = require('./controller/LanguageController');
 
 app.use(express.json());
@@ -38,7 +38,10 @@ function fn(req, res) {
         '/playlist/:playlistId': "getPlaylistsDetails",
         '/search/:query': "getQueryResults",
         '/getAllLanguageData' : "getAllLanguageData",
-        '/getLanguageData/:language': "getLanguageData of the one of the languages like Hindi, English, Tamil, Telugu, Punjabi, Marathi, Gujarati, Bengali, Kannada, Bhojpuri, Malayalam, Urdu, Haryanvi, Rajasthani, Odia, Assamese"
+        '/getLanguageData/:language': "getLanguageData of the one of the languages like Hindi, English, Tamil, Telugu, Punjabi, Marathi, Gujarati, Bengali, Kannada, Bhojpuri, Malayalam, Urdu, Haryanvi, Rajasthani, Odia, Assamese",
+        '/getAllAlbums/:language': "getAllAlbumsInALanguage --> Takes some time to fetch all the data.",
+        '/getAllAlbums/:language/:startsWith' :  'getAllAlbumsInALanguageStartsWith) --> use any characters from a to z for albums starting with alphabet and for data starting with numbers kindly use "0-9" as startsWith '
+
     });
 }
 
@@ -63,6 +66,8 @@ app.get('/playlist/:playlistId', getPlaylistsDetails);
 app.get('/search/:query', getQueryResults);
 app.get('/getLanguageData/:language', getLanguageData);
 app.get('/getAllLanguageData', getAllLanguageData);
+app.get('/getAllAlbums/:language', getAllAlbumsInALanguage); // Takes some time to fetch all the data.
+app.get('/getAllAlbums/:language/:startsWith', getAllAlbumsInALanguageStartsWith); // use any characters from a to z for albums starting with alphabet for data starting with numbers kindly use "0-9" as startsWith
 
 app.listen(port, function () {
     console.log(`server started at ${port}`);

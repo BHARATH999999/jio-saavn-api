@@ -22,6 +22,9 @@ Routes to acess this Api:
         <h4>'/getAllLanguageData'  --> "getAllLanguageData",</h4>
         <h4>'/getLanguageData/:language': "getLanguageData of the one of the languages like
                                            Hindi, English, Tamil, Telugu, Punjabi, Marathi, Gujarati, Bengali, Kannada, Bhojpuri, Malayalam, Urdu, Haryanvi, Rajasthani, Odia, Assamese"</h4>
+        <h4> '/getAllAlbums/:language': "getAllAlbumsInALanguage --> Takes some time to fetch all the data."</h4>
+        <h4> '/getAllAlbums/:language/:startsWith' :  'getAllAlbumsInALanguageStartsWith) --> use any characters from a to z for albums starting with alphabet and for data starting with numbers kindly use "0-9" as startsWith '
+        </h4>
         <h4> And many more to come...</h4>
 
  
