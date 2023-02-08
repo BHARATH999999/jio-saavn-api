@@ -2,6 +2,9 @@ const express = require('express')
 const cors = require('cors')
 const app = express();
 // const axios = require('axios');
+var pretty = require('express-prettify');
+
+app.use(pretty({ query: 'pretty' }));
 const port = process.env.PORT || 9999;
 
 
@@ -37,10 +40,10 @@ function fn(req, res) {
         '/playlistId/:playlistName': "getPlaylistId",
         '/playlist/:playlistId': "getPlaylistsDetails",
         '/search/:query': "getQueryResults",
-        '/getAllLanguageData' : "getAllLanguageData",
+        '/getAllLanguageData': "getAllLanguageData",
         '/getLanguageData/:language': "getLanguageData of the one of the languages like Hindi, English, Tamil, Telugu, Punjabi, Marathi, Gujarati, Bengali, Kannada, Bhojpuri, Malayalam, Urdu, Haryanvi, Rajasthani, Odia, Assamese",
         '/getAllAlbums/:language': "getAllAlbumsInALanguage --> Takes some time to fetch all the data.",
-        '/getAllAlbums/:language/:startsWith' :  'getAllAlbumsInALanguageStartsWith) --> use any characters from a to z for albums starting with alphabet and for data starting with numbers kindly use "0-9" as startsWith '
+        '/getAllAlbums/:language/:startsWith': 'getAllAlbumsInALanguageStartsWith) --> use any characters from a to z for albums starting with alphabet and for data starting with numbers kindly use "0-9" as startsWith '
 
     });
 }
@@ -68,6 +71,10 @@ app.get('/getLanguageData/:language', getLanguageData);
 app.get('/getAllLanguageData', getAllLanguageData);
 app.get('/getAllAlbums/:language', getAllAlbumsInALanguage); // Takes some time to fetch all the data.
 app.get('/getAllAlbums/:language/:startsWith', getAllAlbumsInALanguageStartsWith); // use any characters from a to z for albums starting with alphabet for data starting with numbers kindly use "0-9" as startsWith
+
+app.all('*', function (req, res) {
+    res.status(404).send({400 : 'Not Found or Unaccessible route'});
+}); // Manages all the remaining unacessible routes 
 
 app.listen(port, function () {
     console.log(`server started at ${port}`);
