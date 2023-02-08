@@ -3,7 +3,7 @@
 <img align="center" alt = "Music" width = "100%" height = "666px" src = "https://m.media-amazon.com/images/I/61sKrIdMneL.jpg">
 <h2> </h2>
 <h2> Request:</h2>
-<h3> Kindly acess this api in Postman or Firefox browser, so that you can visualize the data fetched by this api in a pretty manner. </h3> 
+<h3> Kindly acess this api in Postman or Firefox browser, so that you can visualize the data fetched by this api in a pretty manner. (Currently working ont this aspect and I hope you understand. Thankh you.) </h3> 
 <h2> 
 Routes to acess this Api:
 </h2>
@@ -23,7 +23,7 @@ Routes to acess this Api:
         <h4>'/getLanguageData/:language': "getLanguageData of the one of the languages like
                                            Hindi, English, Tamil, Telugu, Punjabi, Marathi, Gujarati, Bengali, Kannada, Bhojpuri, Malayalam, Urdu, Haryanvi, Rajasthani, Odia, Assamese"</h4>
         <h4> '/getAllAlbums/:language': "getAllAlbumsInALanguage --> Takes some time to fetch all the data."</h4>
-        <h4> '/getAllAlbums/:language/:startsWith' :  'getAllAlbumsInALanguageStartsWith) --> use any characters from a to z for albums starting with alphabet and for data starting with numbers kindly use "0-9" as startsWith '
+        <h4> '/getAllAlbums/:language/:startsWith' :  'getAllAlbumsInALanguageStartsWith' --> use any characters from a to z for albums starting with alphabet and for data starting with numbers kindly use "0-9" as startsWith '
         </h4>
         <h4> And many more to come...</h4>
 
@@ -48,3 +48,5 @@ Routes to acess this Api:
  <h3> If you like my work... Rate this Repsitory❤️😊</h3>
  <h3> Feel free to Comment and mention your reviews and tell me about any futher enhancements that can be done </h3>
  <h3> Link to the working Api -- <a target="_blank" href ="https://d68j0s.sse.codesandbox.io/"> Jio Saavn Api </a> </h3>
+ <h3> Soon I am going to launch a full fledged website with the documentation and completely working api. Rate and Share our work. </h3>
+ <h3> I am bound to copyrights...😊 </h3>
