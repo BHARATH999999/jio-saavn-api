@@ -35,7 +35,7 @@ Routes to acess this Api:
                 <img src="https://avatars.githubusercontent.com/u/5658226?s=200&v=4" alt="Express" width="45" height="45"/> 
         </a>
         <a target="_blank" href ="https://cheerio.js.org/" rel="noreferrer">
-                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTIAPmdeXbdwHRGCgUnelx64Ig_zAsJaS__BhjuFY3plSu6EFrQEJiI7xMM9I3wwc_57Q&usqp=CAU"                        alt="Cheerio" width="45" height="45"/> 
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTIAPmdeXbdwHRGCgUnelx64Ig_zAsJaS__BhjuFY3plSu6EFrQEJiI7xMM9I3wwc_57Q&usqp=CAU"                        alt="Cheerio" width="100" height="45"/> 
         </a>
         <a target="_blank" href ="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/" rel="noreferrer">
                 <img src="https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/79f52915-94fb-47db-85a2-46cfe4dffd47_600x600.png"                       alt="Javascript" width="45" height="45"/> 
