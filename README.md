@@ -45,8 +45,8 @@ Routes to acess this Api:
         </a>
 </p>
  <h2></h2>
- <h3> If you like my work... Rate this Repsitory❤️😊</h3>
- <h3> Feel free to Comment and mention your reviews and tell me about any futher enhancements that can be done </h3>
- <h3> Link to the working Api -- <a target="_blank" href ="https://d68j0s.sse.codesandbox.io/"> Jio Saavn Api </a> </h3>
- <h3> Soon I am going to launch a full fledged website with the documentation and completely working api. Rate and Share our work. </h3>
- <h3> I am bound to copyrights...😊 </h3>
+ <h4> If you like my work... Rate this Repsitory❤️😊</h2>
+ <h4> Feel free to Comment and mention your reviews and tell me about any futher enhancements that can be done </h4>
+ <h4> Link to the working Api -- <a target="_blank" href ="https://d68j0s.sse.codesandbox.io/"> Jio Saavn Api </a> </h4>
+ <h4> Soon I am going to launch a full fledged website with the documentation and completely working api. Rate and Share our work. </h4>
+ <h4> I am bound to copyrights...😊 </h4>
