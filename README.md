@@ -43,6 +43,12 @@ Routes to acess this Api:
         <a target="_blank" href ="https://axios-http.com/" rel="noreferrer">
                 <img src="https://avatars.githubusercontent.com/u/32372333?s=200&v=4" alt="Axios" width="45" height="45"/> 
         </a>
+        <a target="_blank" href ="https://www.npmjs.com/package/cors" rel="noreferrer">
+                <img src="https://cdn.pellerex.com/public/ecosystem/web/content/api-cors/pellerex-asp-net-5-web-api-cors.png" alt="CORS" width="111" height="45"/> 
+        </a>
+        <a target="_blank" href ="https://www.jiosaavn.com/" rel="noreferrer">
+                <img src="https://play-lh.googleusercontent.com/gUR8xEKvCngapSZGkZUgoNETAYuhhkCr0Npza-lPSjbRCM55zdS0SK_KxBj1tg2RoQ=w240-h480-rw" alt="Jio Saavn" width="45" height="45"/> 
+        </a>
 </p>
  <h2></h2>
  <h4> If you like my work... Rate this Repsitory❤️😊</h2>
