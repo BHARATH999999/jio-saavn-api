@@ -47,7 +47,12 @@ Routes to acess this Api:
                 <img src="https://cdn.pellerex.com/public/ecosystem/web/content/api-cors/pellerex-asp-net-5-web-api-cors.png" alt="CORS" width="111" height="45"/> 
         </a>
         <a target="_blank" href ="https://www.jiosaavn.com/" rel="noreferrer">
-                <img src="https://play-lh.googleusercontent.com/gUR8xEKvCngapSZGkZUgoNETAYuhhkCr0Npza-lPSjbRCM55zdS0SK_KxBj1tg2RoQ=w240-h480-rw" alt="Jio Saavn" width="45" height="45"/> 
+                <img src="https://play-lh.googleusercontent.com/gUR8xEKvCngapSZGkZUgoNETAYuhhkCr0Npza-lPSjbRCM55zdS0SK_KxBj1tg2RoQ=w240-h480-rw" alt="Jio Saavn" width="45" height="45"/>
+        <a target="_blank" href ="https://nodemon.io/" rel="noreferrer">
+                <img src="https://user-images.githubusercontent.com/13700/35731649-652807e8-080e-11e8-88fd-1b2f6d553b2d.png" alt="nodemon" width="45" height="45"/>
+        </a>
+        <a align = "center" target="_blank" href ="https://postman.com/" rel="noreferrer">
+                <img src="https://voyager.postman.com/logo/postman-logo-icon-orange.svg" alt="Postman" width="45" height="45"/> 
         </a>
 </p>
  <h2></h2>
