@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, Welcome to <a target="_blank" href = "https://100.25.152.189:9999/">Jio Saavn Api </a></h1>
+<h1 align="center">Hi 👋, Welcome to <a target="_blank" href = "http://34.207.57.230/">Jio Saavn Api </a></h1>
 <h3 align="center">An unofficial Music api built with ❤️ using Express.js, cheerio and Javascript</h3>
 <img align="center" alt = "Music" width = "100%" height = "666px" src = "https://m.media-amazon.com/images/I/61sKrIdMneL.jpg">
 <h2> </h2>
