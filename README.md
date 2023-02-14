@@ -2,29 +2,47 @@
 <h3 align="center">An unofficial Music api built with ❤️ using Express.js, cheerio and Javascript</h3>
 <img align="center" alt = "Music" width = "100%" height = "666px" src = "https://m.media-amazon.com/images/I/61sKrIdMneL.jpg">
 <h2> </h2>
-<h2> Request:</h2>
-<h3> Kindly acess this api in Postman or Firefox browser, so that you can visualize the data fetched by this api in a pretty manner. (Currently working ont this aspect and I hope you understand. Thankh you.) </h3> 
 <h2> 
 Routes to acess this Api:
-</h2>
-        <h4>'/homePageDetails' --> "getHomePageDetails",</h4>
-        <h4> '/trendingData' --> "getTrendingData",</h4>
-        <h4>'/albumId/:albumName' --> "getAlbumId",</h4>
-        <h4>'/album/:albumId' --> "getAlbumDetails",</h4>
-        <h4>'/album/songs/:albumId' --> "getAlbumSongs",</h4>
-        <h4>'/songId/:songName' --> "getSongId",</h4>
-        <h4>'/songDetails/:songId' --> "getSongDetails",</h4>
-        <h4>'/songMediaUrl/:songId' --> "getSongMediaUrl",</h4>
-        <h4>'/lyrics/:songId' --> "getLyricsDetails",</h4>
-        <h4>'/playlistId/:playlistName' --> "getPlaylistId",</h4>
-        <h4>'/playlist/:playlistId' --> "getPlaylistsDetails",</h4>
-        <h4>'/search/:query' --> "getQueryResults",</h4>
-        <h4>'/getAllLanguageData'  --> "getAllLanguageData",</h4>
-        <h4>'/getLanguageData/:language': "getLanguageData of the one of the languages like
-                                           Hindi, English, Tamil, Telugu, Punjabi, Marathi, Gujarati, Bengali, Kannada, Bhojpuri, Malayalam, Urdu, Haryanvi, Rajasthani, Odia, Assamese"</h4>
-        <h4> '/getAllAlbums/:language': "getAllAlbumsInALanguage --> Takes some time to fetch all the data."</h4>
-        <h4> '/getAllAlbums/:language/:startsWith' :  'getAllAlbumsInALanguageStartsWith' --> use any characters from a to z for albums starting with alphabet and for data starting with numbers kindly use "0-9" as startsWith '
-        </h4>
+</h2>   
+        <h3> /homePageDetails </h3>
+        <h4> get the home page details of jio-saavn.</h4>
+        <h3> /albumId/xalbumName</h3> 
+        <h4> get AlbumId of a particular album, which will be used for fetching album information. </h4>
+        <h3> /album/xalbumId     </h3> 
+        <h4> get Album information for a particular AlbumId. </h4>
+        <h3> /album/songs/xalbumId</h3> 
+        <h4> get all the Songs in an album with the given albumId. </h4>
+        <h3> /songId/xsongName</h3> 
+        <h4> get SongId of a particular Song, which will be used for fetching song information. </h4>
+        <h3> /songDetails/xsongId</h3> 
+        <h4> get the Song details with the given songId. </h4>
+        <h3> /songMediaUrl/xsongId</h3> 
+        <h4> get Song-media-url with the given songId, which will be used for listening and downloading the song. </h4>
+        <h3> /lyrics/xsongId</h3> 
+        <h4> get the Lyrics(if available) with the given songId. </h4>
+        <h3> /playlistId/xplaylistName</h3> 
+        <h4> get the PlaylistId of a particular Playlist, which will be used for fetching playlist information. </h4>
+        <h3> /playlist/xplaylistId</h3> 
+        <h4> get the Playlists information with the given playlistId. </h4>
+        <h3> /search/xquery</h3> 
+        <h4> get the general search results for a particular Query. </h4>
+        <h3> /getAllLanguageData</h3> 
+        <h4> get the links of all language data i.e. newly releases, weekly top, featured playlists and featured albums. </h4>
+        <h3> /getLanguageData/xlanguage</h3> 
+        <h4> get the links as said above for a particular language like Hindi, English, Tamil, Telugu, Punjabi, Marathi, Gujarati, Bengali, Kannada, Bhojpuri, Malayalam, Urdu, Haryanvi, Rajasthani, Odia, Assamese </h4>
+        <h3> /getAllAlbums/xlanguage</h3> 
+        <h4> get the details(name and link) of All the Albums in a Language(Note:- Takes some time to fetch all the data. </h4>
+        <h3> /getAllAlbums/xlanguage/xstartsWith</h3> 
+        <h4> get the details(name and link) of All the Albums in a Language which starts with a particular character. --> use any characters from a to z for albums starting with alphabet and for data starting with numbers kindly use "0-9" as startsWith.</h4>
+        <h3>Note 1:- </h3>
+        <h4>hostname should be used before all these routes. Hostname is http://34.207.57.230/ </h4>
+        <h3>Example 1:-</h3>
+        <h4>http://34.207.57.230/songId/believer fetches the songId of the song (Believer) as 'BeXBcbVK'. </h4>
+        <h3>Example 2:-</h3>
+        <h4>http://34.207.57.230/songMediaUrl/BeXBcbVK fetches the songMediaUrl of the song (Believer) as 'https://aac.saavncdn.com/248/a6b1b78b396245f712abda8f1daefee0_320.mp4' which can be used to listen or download the same. </h4>
+        <h3>Note 2:- </h3>
+        <h4>replace a particular xparameter with the respective details : Example:- xlanguage can be replaced with English </h4>
         <h4> And many more to come...</h4>
 
  
