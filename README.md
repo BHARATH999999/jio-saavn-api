@@ -1,6 +1,6 @@
 <h1 align="center">Hi 👋, Welcome to <a target="_blank" href = "http://34.207.57.230/">Jio Saavn Api </a></h1>
 <h3 align="center">An unofficial Music api built with ❤️ using Express.js, cheerio and Javascript</h3>
-<img align="center" alt = "Music" width = "100%" height = "666px" src = "https://m.media-amazon.com/images/I/61sKrIdMneL.jpg">
+<img align="center" alt = "Music" width = "90%" height = "50%" src = "https://m.media-amazon.com/images/I/61sKrIdMneL.jpg">
 <h2> </h2>
 <h2> 
 Routes to acess this Api: (HTTP Method: GET)
@@ -79,7 +79,7 @@ Routes to acess this Api: (HTTP Method: GET)
                 <img src="https://cdn-fiejl.nitrocdn.com/yNfvfiSxoeXhsQRaJFUuQCCZqugXTTRV/assets/images/optimized/rev-e551b5a/blog/wp-content/uploads/2021/11/amazon-ec2-logo.jpg" alt="EC2" width="65" height="45"/> 
         </a>
         <a align = "center" target="_blank" href ="https://pm2.keymetrics.io/" rel="noreferrer">
-                <img src="https://pm2.keymetrics.io/assets/pm2-logo-1.png" alt="pm2" width="100" height="45"/> 
+                <img src="https://pm2.keymetrics.io/assets/pm2-logo-1.png" alt="pm2" width="123" height="45"/> 
         </a>
 </p>
  <h2></h2>
