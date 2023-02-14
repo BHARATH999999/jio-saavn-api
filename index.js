@@ -1,13 +1,9 @@
 const express = require('express')
 const cors = require('cors')
 const app = express();
-// const axios = require('axios');
-var pretty = require('express-prettify');
-
-app.use(pretty({ query: 'pretty' }));
 const port = process.env.PORT || 9999;
 
-app.set('json spaces', 2)
+app.set('json spaces', 4)
 app.use(cors());
 // const download = require("node-file-downloader")
 
@@ -27,24 +23,30 @@ const { getLanguageData, getAllLanguageData } = require('./controller/LanguageCo
 app.use(express.json());
 function fn(req, res) {
     res.send({
-        welcome: "Welcome to Jio Saavn Unofficial Api! Created with ❤️❤️❤️ using JavaScript, Express and cheerio by @bharath999999. Here are the routes to acess this api",
-        '/homePageDetails': "getHomePageDetails",
+        welcome: "Welcome to Jio Saavn Unofficial Api! Crafted with ❤️❤️❤️ using JavaScript, Express, cheerio, aws, ec2-instance and pm2 by @bharath999999. Here are the routes to acess this api:-",
+        '/homePageDetails': "get the home page details of jio-saavn.",
         // '/trendingData': "getTrendingData",
-        '/albumId/:albumName': "getAlbumId",
-        '/album/:albumId': "getAlbumDetails",
-        '/album/songs/:albumId': "getAlbumSongs",
-        '/songId/:songName': "getSongId",
-        '/songDetails/:songId': "getSongDetails",
-        '/songMediaUrl/:songId': "getSongMediaUrl",
-        '/lyrics/:songId': "getLyricsDetails",
-        '/playlistId/:playlistName': "getPlaylistId",
-        '/playlist/:playlistId': "getPlaylistsDetails",
-        '/search/:query': "getQueryResults",
-        '/getAllLanguageData': "getAllLanguageData",
-        '/getLanguageData/:language': "getLanguageData of the one of the languages like Hindi, English, Tamil, Telugu, Punjabi, Marathi, Gujarati, Bengali, Kannada, Bhojpuri, Malayalam, Urdu, Haryanvi, Rajasthani, Odia, Assamese",
-        '/getAllAlbums/:language': "getAllAlbumsInALanguage --> Takes some time to fetch all the data.",
-        '/getAllAlbums/:language/:startsWith': 'getAllAlbumsInALanguageStartsWith) --> use any characters from a to z for albums starting with alphabet and for data starting with numbers kindly use "0-9" as startsWith '
-
+        '/albumId/<albumName>': "get AlbumId of a particular album, which will be used for fetching album information.",
+        '/album/<albumId>':      "get Album information for a particular AlbumId.",
+        '/album/songs/<albumId>': "get all the Songs in an album with the given albumId.",
+        '/songId/<songName>': "get SongId of a particular Song, which will be used for fetching song information.",
+        '/songDetails/<songId>': "get the Song details with the given songId.",
+        '/songMediaUrl/<songId>': "get Song-media-url with the given songId, which will be used for listening and downloading the song.",
+        '/lyrics/<songId>': "get the Lyrics(if available) with the given songId.",
+        '/playlistId/<playlistName>': "get the PlaylistId of a particular Playlist, which will be used for fetching playlist information.",
+        '/playlist/<playlistId>': "get the Playlists information with the given playlistId.",
+        '/search/<query>': "get the general search results for a particular Query.",
+        '/getAllLanguageData': "get the links of all language data i.e. newly releases, weekly top, featured playlists and featured albums.",
+        '/getLanguageData/<language>': "get the links as said above for a particular language like Hindi, English, Tamil, Telugu, Punjabi, Marathi, Gujarati, Bengali, Kannada, Bhojpuri, Malayalam, Urdu, Haryanvi, Rajasthani, Odia, Assamese",
+        '/getAllAlbums/<language>': "get the details(name and link) of All the Albums in a Language(Note:- Takes some time to fetch all the data.)",
+        '/getAllAlbums/<language>/<startsWith>': 'get the details(name and link) of All the Albums in a Language which starts with a particular character. --> use any characters from a to z for albums starting with alphabet and for data starting with numbers kindly use "0-9" as startsWith ',
+        "Note 1:- hostname should be used before all these routes." : "Hostname is http://34.207.57.230/",
+        "Example 1:-" : "http://34.207.57.230/songId/believer fetches the songId of the song (Believer) as 'BeXBcbVK'.",
+        "Example 2:-":  "http://34.207.57.230/songMediaUrl/BeXBcbVK fetches the songMediaUrl of the song (Believer) as 'https://aac.saavncdn.com/248/a6b1b78b396245f712abda8f1daefee0_320.mp4' which can be used to listen or download the same.",
+        "Note 2:- replace a particular <parameter> with the respective details" : "Example:- <language> can be replaced with English",
+        "help" : "If you found any errors, feel free to comment them in our repository 'https://github.com/BHARATH999999/jio-saavn-api' and star the same repository if you really love this api.",
+        "Disclaimer" : "The data fetched and the links(everything) is available online. I have only made the process of acheiving the data easier, Thanks!",
+        "More to come" : "Many more routes, features and documentation are on the way. Stay in touch."
     });
 }
 
