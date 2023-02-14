@@ -7,7 +7,7 @@ var pretty = require('express-prettify');
 app.use(pretty({ query: 'pretty' }));
 const port = process.env.PORT || 9999;
 
-
+app.set('json spaces', 2)
 app.use(cors());
 // const download = require("node-file-downloader")
 
