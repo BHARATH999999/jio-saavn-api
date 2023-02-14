@@ -3,7 +3,7 @@
 <img align="center" alt = "Music" width = "100%" height = "666px" src = "https://m.media-amazon.com/images/I/61sKrIdMneL.jpg">
 <h2> </h2>
 <h2> 
-Routes to acess this Api:
+Routes to acess this Api: (HTTP Method: GET)
 </h2>   
         <h3> /homePageDetails </h3>
         <h4> get the home page details of jio-saavn.</h4>
