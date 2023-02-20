@@ -76,7 +76,7 @@ Routes to acess this Api: (HTTP Method: GET)
                 <img src="https://logos-world.net/wp-content/uploads/2021/08/Amazon-Web-Services-AWS-Logo-700x394.png" alt="AWS" width="65" height="45"/> 
         </a>
         <a align = "center" target="_blank" href ="https://aws.amazon.com/ec2/" rel="noreferrer">
-                <img src="https://cdn-fiejl.nitrocdn.com/yNfvfiSxoeXhsQRaJFUuQCCZqugXTTRV/assets/images/optimized/rev-e551b5a/blog/wp-content/uploads/2021/11/amazon-ec2-logo.jpg" alt="EC2" width="65" height="45"/> 
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPl8tSBmq1zwsAL5KYeRdyUXy6z_vnBfbgp9D8p-7A&s" alt="EC2" width="65" height="45"/> 
         </a>
         <a align = "center" target="_blank" href ="https://pm2.keymetrics.io/" rel="noreferrer">
                 <img src="https://pm2.keymetrics.io/assets/pm2-logo-1.png" alt="pm2" width="123" height="45"/> 
